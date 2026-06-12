@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frontend Developer</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #07111f;
+      --panel: rgba(15, 23, 42, 0.92);
+      --panel-2: rgba(8, 15, 27, 0.92);
+      --line: rgba(148, 163, 184, 0.18);
+      --text: #edf4ff;
+      --muted: #bfccdf;
+      --accent: #7dd3fc;
+      --good: #86efac;
+      --warn: #fbbf24;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, #12253b 0%, #07111f 35%, #030712 100%);
+      color: var(--text);
+      line-height: 1.4;
+    }
+    .page { max-width: 1400px; margin: 0 auto; padding: 16px 12px 40px; }
+    .hero {
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.96), rgba(10, 14, 24, 0.92));
+      border-radius: 24px;
+      padding: 18px;
+      box-shadow: 0 18px 42px rgba(3, 7, 18, 0.45);
+      margin-bottom: 14px;
+    }
+    .eyebrow { text-transform: uppercase; letter-spacing: .25em; font-size: 10px; color: var(--accent); }
+    h1 { font-size: clamp(1.45rem, 5vw, 2.4rem); margin: 6px 0 8px; }
+    .lead { color: var(--muted); font-size: 0.98rem; max-width: 980px; }
+    .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-top: 12px; }
+    .chip {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(15, 23, 42, 0.92);
+      padding: 10px 12px;
+      color: var(--text);
+    }
+    .chip strong { display: block; color: var(--accent); font-size: 0.88rem; margin-bottom: 4px; text-transform: uppercase; letter-spacing: .18em; }
+    .summary { margin-top: 10px; color: var(--muted); font-size: 0.94rem; }
+    .competency-card {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(8, 15, 27, 0.95));
+      border-radius: 22px;
+      padding: 12px;
+      margin-bottom: 12px;
+      box-shadow: 0 14px 28px rgba(3, 7, 18, 0.35);
+    }
+    .competency-header { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; flex-wrap: wrap; margin-bottom: 8px; }
+    .competency-header h2 { margin: 4px 0 6px; font-size: 1.1rem; }
+    .competency-header .lead { font-size: 0.95rem; }
+    .mini-stat {
+      border: 1px solid rgba(125, 211, 252, 0.22);
+      background: rgba(56, 189, 248, 0.08);
+      color: #dbeafe;
+      border-radius: 14px;
+      padding: 8px 10px;
+      font-size: 0.92rem;
+      white-space: nowrap;
+    }
+    .level-block { margin-top: 10px; }
+    .level-block h3 { margin: 0 0 8px; font-size: 1rem; color: #e0f2fe; text-transform: capitalize; }
+    .theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+    .theme-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 10px;
+      background: rgba(8, 15, 27, 0.95);
+      min-height: 72px;
+    }
+    .theme-badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.12);
+      color: #bae6fd;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      margin-bottom: 6px;
+    }
+    .theme-card h4 { margin: 0; color: var(--text); font-size: 0.95rem; line-height: 1.35; }
+    footer { color: var(--muted); font-size: 0.9rem; text-align: center; margin-top: 10px; }
+    @media (max-width: 768px) {
+      .page { padding: 10px 10px 28px; }
+      .hero { padding: 14px; }
+      .meta-grid { grid-template-columns: 1fr 1fr; }
+      .theme-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .meta-grid { grid-template-columns: 1fr; }
+      .mini-stat { width: 100%; }
+      .competency-header { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">Frontend Developer</p>
+      <h1>Frontend Developer</h1>
+      <p class="lead">Frontend-разработчик создает интерфейсы веб-приложений, используя фреймворк Angular и язык TypeScript. Специалист создает и поддерживает Angular приложения, занимается интеграцией с API.</p>
+      <div class="meta-grid">
+        <article class="chip"><strong>Департамент</strong>Департамент Halyk Super App</article>
+        <article class="chip"><strong>Файл</strong>Департамент Halyk Super App_Frontend Developer</article>
+        <article class="chip"><strong>Темы</strong>120</article>
+      </div>
+      <p class="summary">Это frontend-разработчик, который занимается созданием пользовательских интерфейсов веб-приложений на Angular и TypeScript. Он разрабатывает и поддерживает Angular-приложения, а также интегрирует их с backend через API.</p>
+    </header>
+    
+      <section class="competency-card">
+        <header class="competency-header">
+          <div>
+            <p class="eyebrow">РАЗРАБОТЧИК</p>
+            <h2>Знание TypeScript</h2>
+            <p class="lead">Следует генерировать вопросы о правилах присвоения типов простым переменным и создании базовых интерфейсов для объектов.</p>
+          </div>
+          <div class="mini-stat">Вес: 0.3</div>
+        </header>
+        
+        <section class="level-block">
+          <h3>Junior</h3>
+          <div class="theme-grid">
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Примитивные типы TypeScript - явная типизация переменных (string, number, boolean) в Angular-компоненте</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Интерфейсы TypeScript - создание базового интерфейса User с обязательными полями id, name и email</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Необязательные поля интерфейса - использование оператора ? для описания опциональных свойств объекта Product</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Типизированные массивы - объявление и использование массивов объектов на основе готового интерфейса (User[])</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Тип any в TypeScript - последствия использования и замена явными типами в существующем коде компонента</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Типизация переменных в Angular-компоненте - добавление явных типов к свойствам класса компонента</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Интерфейсы для API-ответов - описание структуры объекта, возвращаемого сервером, с помощью TypeScript-интерфейса</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Тип string[] и number[] - типизация массивов примитивных значений в шаблонах Angular-компонента</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Обязательные и необязательные поля интерфейса - проектирование интерфейса для карточки товара с полями title, price и description</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Типизация входных данных компонента - добавление явного типа к декоратору @Input() в Angular-компоненте</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Тип объекта в TypeScript - разница между использованием inline-типа и отдельного интерфейса для описания объекта</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Типизация локальных переменных в методах компонента - явное указание типов для переменных внутри методов класса Angular</h4>
+    </article></div>
+        </section>
+      
+        <section class="level-block">
+          <h3>Middle</h3>
+          <div class="theme-grid">
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Дженерики TypeScript - создание обобщённого интерфейса ApiResponse&lt;T&gt; для типизации HTTP-ответов в Angular-сервисах</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Union-типы и литеральные типы - описание статусных моделей сущностей через объединение строковых литералов</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Type Alias и Partial - создание производных типов FilterParams на основе существующих интерфейсов для параметров фильтрации</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Интерфейсы вложенных объектов - типизация иерархических структур ответов API с взаимными ссылками между сущностями</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Дженерики в Angular HTTP-сервисах - типизация методов HttpClient с использованием параметров типа для безопасного получения данных</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Утилитарные типы TypeScript - применение Partial, Required, Pick и Omit при построении интерфейсов для форм и запросов Angular-приложения</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Discriminated Union - использование размеченных объединений для типизации состояний загрузки данных в Angular-компонентах</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Типизация методов сервисов - описание сигнатур методов Angular-сервисов с дженериками и union-типами для корректной интеграции с API</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Readonly и неизменяемые типы - применение Readonly и ReadonlyArray для защиты данных конфигурации и справочников в Angular-приложении</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Intersection-типы - объединение интерфейсов через &amp; для составных типов сущностей, сочетающих несколько контрактов API</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Типовые Guards и narrowing - применение type guards для безопасного сужения union-типов при обработке ответов API в Angular-сервисах</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Enum и литеральные типы - сравнение подходов к описанию фиксированных наборов значений и выбор оптимального варианта для типизации сущностей Angular-приложения</h4>
+    </article></div>
+        </section>
+      
+        <section class="level-block">
+          <h3>Senior</h3>
+          <div class="theme-grid">
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Mapped Types — создание типов валидаторов форм на основе интерфейсов доменных моделей Angular</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Template Literal Types — типобезопасное формирование строковых ключей маршрутов Angular Router</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Условные типы и infer — извлечение вложенных типов из сложных дженерик-структур Angular-сервисов</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Параметризованные дженерики — проектирование базовых интерфейсов HTTP-запросов и ответов API</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Декораторы TypeScript — явная типизация Input и Output параметров Angular-компонентов</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Утилитарные типы (Partial, Required, Pick, Omit) — конструирование производных типов для форм и DTO на стороне Angular</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Discriminated Unions — моделирование состояний загрузки и ошибок HTTP-ответов в Angular-сервисах</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Строгая типизация RxJS-потоков — параметризация Observable, Subject и операторов в Angular-сервисах</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Рекурсивные и вложенные типы — описание древовидных структур данных для Angular-компонентов навигации и меню</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Branded Types и Nominal Typing — исключение подмены несовместимых примитивных типов в Angular-приложении</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Типизация Angular Router — строгие контракты параметров маршрутов, query-параметров и данных resolve-гвардов</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Namespace и Module Augmentation — расширение и организация типов внутри frontend-модуля Angular-приложения</h4>
+    </article></div>
+        </section>
+      
+      </section>
+      <section class="competency-card">
+        <header class="competency-header">
+          <div>
+            <p class="eyebrow">РАЗРАБОТЧИК</p>
+            <h2>Знание Angular и RxJS</h2>
+            <p class="lead">Вопросы должны охватывать понимание структуры компонента, способов отображения данных в шаблоне и использования простейших встроенных директив.</p>
+          </div>
+          <div class="mini-stat">Вес: 0.3</div>
+        </header>
+        
+        <section class="level-block">
+          <h3>Junior</h3>
+          <div class="theme-grid">
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Структура Angular компонента - взаимосвязь шаблона, класса и декоратора @Component</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Интерполяция в Angular шаблонах - отображение свойств класса компонента через двойные фигурные скобки</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Директива *ngFor - итерация по массиву данных и отображение списков в шаблоне компонента</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Директива *ngIf - условное отображение элементов шаблона на основе булевых свойств компонента</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Директива ngClass - динамическое переключение CSS-классов в зависимости от состояния компонента</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Property binding в Angular - передача значений в атрибуты DOM-элементов через квадратные скобки</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Event binding в Angular - обработка пользовательских событий в шаблоне через круглые скобки</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Директива ngStyle - динамическое управление инлайн-стилями элементов в зависимости от данных компонента</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Input-свойства компонента - передача данных от родительского компонента к дочернему через декоратор @Input</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Pipe-операторы в Angular шаблонах - форматирование отображаемых данных с помощью встроенных pipes</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Директива *ngFor - использование переменных контекста trackBy, index и last при итерации списков</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Output и EventEmitter в Angular - генерация событий из дочернего компонента и их обработка в родительском</h4>
+    </article></div>
+        </section>
+      
+        <section class="level-block">
+          <h3>Middle</h3>
+          <div class="theme-grid">
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>RxJS операторы управления асинхронностью - применение debounceTime и switchMap для реализации поиска с автодополнением</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Angular компоненты - передача данных между родительским и дочерним компонентом через @Input и @Output</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>RxJS обработка ошибок - использование catchError и retry при интеграции с REST API через HttpClient</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Angular шаблоны - отображение состояний загрузки, ошибки и данных с помощью встроенных директив NgIf и NgSwitch</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>RxJS комбинирование потоков - объединение нескольких Observable через combineLatest для фильтрации списков</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Angular HttpClient - выполнение HTTP-запросов и обработка ответов REST API в реактивном стиле</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>RxJS Subject и BehaviorSubject - управление состоянием внутри компонента и передача данных между связанными компонентами</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Angular реактивные формы - связывание элементов управления с потоками RxJS через valueChanges для динамической фильтрации</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>RxJS операторы трансформации - использование map, filter и tap для преобразования данных из API перед отображением</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Angular директива NgFor - отображение динамических списков с trackBy для оптимизации перерисовки при сортировке и фильтрации</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>RxJS управление подписками - использование async pipe и оператора takeUntil для предотвращения утечек памяти в компонентах</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Angular жизненный цикл компонента - использование хуков OnInit и OnDestroy для инициализации потоков и корректного завершения подписок</h4>
+    </article></div>
+        </section>
+      
+        <section class="level-block">
+          <h3>Senior</h3>
+          <div class="theme-grid">
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Архитектура Angular-модуля - декомпозиция на smart и dumb компоненты с определением стратегии передачи данных через Input/Output и сервисы</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>OnPush ChangeDetection - стратегия применения в feature-модуле и управление обнаружением изменений через markForCheck и detectChanges</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>RxJS-операторы объединения потоков - применение forkJoin, combineLatest и mergeMap для агрегации данных из нескольких API-эндпоинтов в компоненте дашборда</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Управление подписками в Angular - выбор между async pipe, takeUntilDestroyed и ручным unsubscribe в зависимости от контекста компонента</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Реактивные сервисы на Subject и BehaviorSubject - проектирование сервисного слоя для разделения состояния между компонентами feature-модуля</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Retry-логика и обработка ошибок в RxJS - реализация стратегий повторных запросов через retry, retryWhen и catchError в HTTP-потоках</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Отмена запросов в RxJS - использование takeUntil, switchMap и takeUntilDestroyed для корректного завершения потоков при уничтожении компонента</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Управление очередью событий через RxJS - применение операторов scan, bufferTime и delay для построения системы нотификаций в Angular-приложении</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Angular Signals - интеграция с RxJS через toSignal и toObservable, выбор между сигналами и Observable в компонентах с OnPush</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Динамическое управление CSS через ngClass и ngStyle - реализация анимационной логики состояний компонента уведомлений без прямой манипуляции DOM</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Проектирование реактивных форм в Angular - построение сложных FormGroup с динамической валидацией через RxJS-потоки на событиях valueChanges и statusChanges</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Стратегии кэширования HTTP-запросов в Angular - реализация shareReplay и publishReplay в сервисном слое для предотвращения дублирующих запросов к API</h4>
+    </article></div>
+        </section>
+      
+      </section>
+      <section class="competency-card">
+        <header class="competency-header">
+          <div>
+            <p class="eyebrow">РАЗРАБОТЧИК</p>
+            <h2>Базовые навыки работы с Git</h2>
+            <p class="lead">Используется на базовом уровне (push, pull, commit, merge, checkout), не требуются глубокие знания. Вопросы не должны содержать сложные темы и не должны быть вопросы про понимание внутреннего устройства Git.</p>
+          </div>
+          <div class="mini-stat">Вес: 0.1</div>
+        </header>
+        
+        <section class="level-block">
+          <h3>Junior</h3>
+          <div class="theme-grid">
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Коммиты в Git - создание понятных сообщений коммитов при сохранении изменений в Angular-компонентах</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Синхронизация с удалённым репозиторием - использование git pull для получения актуального кода перед началом работы над задачей</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Работа с ветками - переключение между существующими ветками с помощью git checkout в процессе командной разработки</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Слияние веток - выполнение merge для интеграции изменений из main в feature-ветку при работе над Angular-приложением</h4>
+    </article></div>
+        </section>
+      
+        <section class="level-block">
+          <h3>Middle</h3>
+          <div class="theme-grid">
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Ветвление в Git — создание и публикация feature-ветки по командному Git-flow для разработки Angular-компонентов</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Фиксация изменений в Git — последовательность операций git add, git commit, git push при отправке кода на ревью</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Разрешение конфликтов слияния — merge основной ветки в feature-ветку при изменениях в TypeScript-файлах Angular-компонентов</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Откат изменений в Git — использование git checkout для восстановления файлов Angular-компонента до состояния последнего коммита</h4>
+    </article></div>
+        </section>
+      
+        <section class="level-block">
+          <h3>Senior</h3>
+          <div class="theme-grid">
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Стратегия ветвления для крупных фич - создание иерархии feature-веток и управление порядком их слияния в Angular-проекте</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Разрешение конфликтов слияния - работа со сложными merge-конфликтами в нескольких Angular-компонентах, сервисах и файлах маршрутизации одновременно</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Hotfix-ветки - создание, исправление критического бага и слияние обратно в main и develop без потери текущих изменений</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Подготовка истории коммитов к код-ревью - объединение черновых коммитов в логически завершённые единицы с понятными сообщениями</h4>
+    </article></div>
+        </section>
+      
+      </section>
+      <section class="competency-card">
+        <header class="competency-header">
+          <div>
+            <p class="eyebrow">РАЗРАБОТЧИК</p>
+            <h2>Знание JavaScript</h2>
+            <p class="lead">Необходимо сосредоточиться на вопросах о базовом синтаксисе, работе с переменными и функцими, а также на логике обработки простых действий пользователя.</p>
+          </div>
+          <div class="mini-stat">Вес: 0.1</div>
+        </header>
+        
+        <section class="level-block">
+          <h3>Junior</h3>
+          <div class="theme-grid">
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Переменные JavaScript - объявление через let и const для хранения данных форм</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Функции JavaScript - создание и использование функций с условной логикой if/else</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>DOM-манипуляции - поиск элементов через getElementById и изменение их содержимого</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Обработка событий - подключение обработчиков click и input для реакции на действия пользователя</h4>
+    </article></div>
+        </section>
+      
+        <section class="level-block">
+          <h3>Middle</h3>
+          <div class="theme-grid">
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Замыкания и область видимости — инкапсуляция состояния модуля без загрязнения глобального пространства имён</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Асинхронность и таймеры — управление отложенным выполнением через setTimeout с учётом поведения var и let в цикле</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Функции высшего порядка — реализация debounce и throttle для оптимизации обработки пользовательских событий</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Функциональные методы массивов — трансформация коллекций объектов через filter, map и sort в задачах отображения данных</h4>
+    </article></div>
+        </section>
+      
+        <section class="level-block">
+          <h3>Senior</h3>
+          <div class="theme-grid">
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Event Loop и микрозадачи — управление порядком выполнения асинхронных операций и реализация очереди промисов с ограничением конкурентности</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Управление памятью в браузере — выявление и устранение утечек памяти, вызванных накоплением обработчиков событий на динамических DOM-элементах</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Оптимизация рендеринга — реализация виртуального скролла и управление перерисовкой DOM через requestAnimationFrame для работы с большими списками</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Мемоизация и профилирование — устранение избыточных перевычислений в нагруженных модулях обработки пользовательского ввода и выявление узких мест производительности</h4>
+    </article></div>
+        </section>
+      
+      </section>
+      <section class="competency-card">
+        <header class="competency-header">
+          <div>
+            <p class="eyebrow">РАЗРАБОТЧИК</p>
+            <h2>Знание основ HTML5 и CSS3</h2>
+            <p class="lead">Cледует генерировать вопросы о назначении базовых структурных тегов и правилах построения доступной и логичной разметки страницы. Также вопросы должны проверять понимание основ оформления элементов, работы с отступами и простейших способов выравнивания блоков.</p>
+          </div>
+          <div class="mini-stat">Вес: 0.1</div>
+        </header>
+        
+        <section class="level-block">
+          <h3>Junior</h3>
+          <div class="theme-grid">
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Семантическая HTML5-разметка - использование структурных тегов header, main, footer, aside, article и section для построения логичной иерархии страницы</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>CSS-свойства margin и padding - управление внешними и внутренними отступами элементов при воспроизведении макета</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Иерархия заголовков HTML - правила применения тегов h1–h6 для создания доступной и читаемой структуры контента</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Базовые CSS-свойства оформления - применение color, font-size, background-color и border для стилизации элементов интерфейса по стилевому гайду</h4>
+    </article></div>
+        </section>
+      
+        <section class="level-block">
+          <h3>Middle</h3>
+          <div class="theme-grid">
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Семантическая HTML5-разметка — выбор структурных тегов и атрибутов доступности aria-label при построении Angular-компонентов</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Flexbox-модель — настройка justify-content и align-items для горизонтального выравнивания блоков в компонентах Angular</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>CSS-псевдоклассы — стилизация интерактивных состояний элементов (hover, focus, disabled) с учётом каскада и специфичности</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Блочная модель CSS — применение box-sizing: border-box и управление отступами при создании адаптивных списков и сеток</h4>
+    </article></div>
+        </section>
+      
+        <section class="level-block">
+          <h3>Senior</h3>
+          <div class="theme-grid">
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Семантическая HTML5-разметка - проектирование иерархии заголовков и структуры вложенных секций в сложных Angular-компонентах</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>ARIA-атрибуты и управление фокусом - реализация доступных переиспользуемых компонентов (модальные окна, диалоги) с role, aria-modal, aria-labelledby и tabindex по стандартам WCAG</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>CSS Grid и Flexbox - разработка многоуровневых layout-решений с вложенными контейнерами для масштабируемой архитектуры Angular-приложений</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Аудит семантики и доступности - самостоятельная проверка HTML-разметки и CSS-стилей Angular-компонентов на соответствие стандартам и формулирование технических рекомендаций</h4>
+    </article></div>
+        </section>
+      
+      </section>
+      <section class="competency-card">
+        <header class="competency-header">
+          <div>
+            <p class="eyebrow">РАЗРАБОТЧИК</p>
+            <h2>Архитектура Frontend-приложений</h2>
+            <p class="lead">Необходимо генерировать вопросы о разделении ответственности между визуальной частью и логикой сервисов на уровне базового понимания проекта.</p>
+          </div>
+          <div class="mini-stat">Вес: 0.1</div>
+        </header>
+        
+        <section class="level-block">
+          <h3>Junior</h3>
+          <div class="theme-grid">
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Разделение ответственности в Angular - перенос бизнес-логики из компонента в сервис</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Angular-сервисы - вынесение HTTP-запросов к API из компонентов в сервисный слой</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Компонент как отображение данных - отделение логики вычислений от шаблона и класса компонента</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Junior</div>
+      <h4>Устранение дублирования кода - объединение повторяющейся логики нескольких компонентов в единый сервис</h4>
+    </article></div>
+        </section>
+      
+        <section class="level-block">
+          <h3>Middle</h3>
+          <div class="theme-grid">
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Facade-паттерн в Angular - инкапсуляция бизнес-логики модуля в сервисном слое</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Repository-паттерн в Angular - абстрагирование компонентов от HTTP-взаимодействия и работы с данными</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Разделение ответственности - определение границ между компонентами представления и сервисами</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Middle</div>
+      <h4>Презентационные сервисы - управление состоянием многошаговых форм вне компонентов</h4>
+    </article></div>
+        </section>
+      
+        <section class="level-block">
+          <h3>Senior</h3>
+          <div class="theme-grid">
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Многоуровневая архитектура сервисного слоя - разделение ответственности между слоями API-клиентов, доменных сервисов и сервисов представления в Angular-приложении</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Управление состоянием на уровне приложения - проектирование иерархии сервисов состояния с правилами владения данными и контролируемыми потоками обновлений между модулями</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Интеграция с REST API - паттерны абстракции, трансформации данных и централизованной обработки ошибок на уровне сервисного слоя Angular-приложения</h4>
+    </article>
+    <article class="theme-card">
+      <div class="theme-badge">Senior</div>
+      <h4>Декомпозиция монолитного Angular-приложения - разбиение на независимые feature-модули с собственными сервисными слоями и формализованными публичными API между ними</h4>
+    </article></div>
+        </section>
+      
+      </section>
+    <footer>Сгенерировано автоматически из frontend-themes.json</footer>
+  </main>
+</body>
+</html>
